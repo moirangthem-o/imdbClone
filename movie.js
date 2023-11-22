@@ -39,16 +39,16 @@ function createMovieCard() {
   childDiv2.classList.add("col");
 
   const actorP = document.createElement("p");
-  actorP.textContent = movieDetails?.Actors;
+  actorP.textContent = "Actors: " + movieDetails?.Actors;
 
   const countryP = document.createElement("p");
-  countryP.textContent = movieDetails?.Country;
+  countryP.textContent = "Country: " + movieDetails?.Country;
 
   const plotP = document.createElement("p");
-  plotP.textContent = movieDetails?.Plot;
+  plotP.textContent = "Plot: " + movieDetails?.Plot;
 
   const divElement = document.createElement("div");
-  divElement.classList.add( "p-3", "row", "bg-grad");
+  divElement.classList.add("p-3", "row", "bg-grad");
 
   const imgElement = document.createElement("img");
   imgElement.classList.add("poster");
