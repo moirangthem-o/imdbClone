@@ -8,11 +8,13 @@ if (localStorage.getItem("favouriteMovies")) {
   favouriteMovies = JSON.parse(localStorage.getItem("favouriteMovies"));
 }
 
-const url = new URL(window.location.href);
-
 // Get the value of the 'id' parameter
+
+const url = new URL(window.location.href);
 const id = url.searchParams.get("id");
 
+
+//function to the get the movie details using API call
 function getMovieDetails(id) {
   const apiUrl = omdbapiUrl + `?i=${id}&apiKey=${apiKey}`;
   fetch(apiUrl)
@@ -30,6 +32,8 @@ function getMovieDetails(id) {
 }
 getMovieDetails(id);
 
+
+//create a movie card that displays the fetch data 
 function createMovieCard() {
   // Create the elements
 
@@ -117,6 +121,4 @@ function addmovieToFavourites() {
   localStorage["favouriteMovies"] = JSON.stringify(favouriteMovies);
 }
 
-// function removeFromFavourites(){
 
-// }

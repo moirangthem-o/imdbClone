@@ -1,3 +1,4 @@
+
 const favouritesDiv = document.querySelector(".favourites");
 let favouriteMovies = [];
 let searchResults = [];
@@ -21,6 +22,8 @@ function refreshFavourites() {
   }
 }
 
+
+//create a movie card
 function createMovieCardFavourites(title, imgSrc, Year, imdbID) {
   // Create the elements
   const divElement = document.createElement("div");
@@ -59,7 +62,7 @@ function createMovieCardFavourites(title, imgSrc, Year, imdbID) {
   divElement.appendChild(pElementTitle);
   divElement.appendChild(pElementYear);
 
-  //show the card on ui
+  //append all the elements on the main div
   favouritesDiv.appendChild(divElement);
 
 
@@ -73,13 +76,3 @@ function removeFromFavourites(imdbID) {
   refreshFavourites();
 }
 
-// function addmovieToFavourites(title, imgSrc, year, imdbID) {
-//   const obj = {
-//     Title: title,
-//     Year: year,
-//     Poster: imgSrc,
-//     id: imdbID,
-//   };
-//   favouriteMovies.push(obj);
-//   localStorage["favouriteMovies"] = JSON.stringify(favouriteMovies);
-// }
